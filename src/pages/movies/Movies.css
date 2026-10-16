@@ -1,0 +1,133 @@
+.movies-container {
+  background: #0f0f10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.movie-card--container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px 16px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+
+.card-links {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px 24px 16px 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.sort-title {
+  padding-right: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.select-filter {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 12px 20px;
+  font-size: 15px;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.select-filter option {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+.select-filter:focus {
+  border-color: #e50914;
+}
+
+.top-left {
+  width: 100%;
+}
+
+.top-left button {
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.top-left button:hover {
+  background-color: #f40b16;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+.top-left button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+@media (max-width: 480px) {
+  .sort-title {
+    display: none;
+  }
+
+  .movie-card--container {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 550px) {
+  .movie-card--container {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 32px 24px;
+  }
+}
+
+@media (min-width: 600px) {
+  .top-left button {
+    width: auto;
+  }
+
+  .top-left {
+    width: auto;
+  }
+
+  .top-right {
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .movie-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
