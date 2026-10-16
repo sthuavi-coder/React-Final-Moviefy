@@ -10,7 +10,7 @@ function MovieInfo() {
 
   async function getMovieData() {
     const { data } = await axios.get(
-      `http://www.omdbapi.com/?apikey=b04c8fbe&plot=full&i=${id}`,
+      `https://www.omdbapi.com/?apikey=b04c8fbe&plot=full&i=${id}`,
     );
 
     setMovie(data);
